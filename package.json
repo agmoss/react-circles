@@ -1,0 +1,59 @@
+{
+  "name": "react-circles",
+  "version": "1.0.0",
+  "description": "Spinning canvas circles",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "lint": "eslint --fix --ext .ts,.tsx .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:types":"tsc",
+    "build:package":"npx webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agmoss/react-circles.git"
+  },
+  "author": "Andrew Moss <andrew@m0ss.dev> (https://m0ss.dev/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/agmoss/react-circles/issues"
+  },
+  "homepage": "https://github.com/agmoss/react-circles#readme",
+  "keywords": [
+    "react",
+    "canvas",
+    "circles",
+    "art",
+    "generative"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "@babel/preset-typescript": "^7.9.0",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
+    "@typescript-eslint/eslint-plugin": "^2.27.0",
+    "@typescript-eslint/parser": "^2.27.0",
+    "babel-loader": "^8.1.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^6.2.2",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
