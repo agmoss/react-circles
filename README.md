@@ -1,6 +1,6 @@
 ## react-circles [![NPM Package](https://img.shields.io/npm/v/react-circles)](https://www.npmjs.com/package/react-circles)
 
-A small react component to for rendering a rotating circle animation. 
+A small react component to for rendering a rotating circle animation. [Example](https://m0ss.dev/react-circles)
 
 ## Installation
 
@@ -24,7 +24,7 @@ import Circles from 'react-circles'
 
 // Full Screen with background color 
 
-<div style={{minHeight:window.innerHeight, minWidth:window.innerWidth, backgroundColor:"black"}}>
+<div style={{height:window.innerHeight, width:window.innerWidth, backgroundColor:"black"}}>
     <Circles numCircles={60} speed={'slow'}/>
 </div>
 ```
