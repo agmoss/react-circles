@@ -3,13 +3,14 @@
   "version": "2.0.2",
   "description": "Spinning canvas circles",
   "main": "dist/index.js",
-  "module": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "build/index.es.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "prepublish": "rm -rf ./dist && npm run build",
     "lint": "eslint --fix --ext .ts,.tsx .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && npx webpack"
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -29,30 +30,23 @@
     "generative"
   ],
   "devDependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
-    "@babel/preset-react": "^7.9.4",
-    "@babel/preset-typescript": "^7.9.0",
     "@types/react": "^16.9.34",
-    "@types/react-dom": "^16.9.6",
     "@typescript-eslint/eslint-plugin": "^2.27.0",
     "@typescript-eslint/parser": "^2.27.0",
-    "babel-loader": "^8.1.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
+    "rollup": "^2.6.1",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.2",
+    "rollup-plugin-typescript2": "^0.27.0",
     "source-map-loader": "^0.2.4",
     "ts-loader": "^6.2.2",
-    "typescript": "^3.8.3",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "typescript": "^3.8.3"
   },
   "peerDependencies": {
     "react": "^16.13.1",
