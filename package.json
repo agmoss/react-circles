@@ -6,6 +6,7 @@
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
+    "prepublish": "rm -rf ./dist && npm run build",
     "lint": "eslint --fix --ext .ts,.tsx .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc && npx webpack"
@@ -28,6 +29,8 @@
     "generative"
   ],
   "devDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
@@ -51,7 +54,7 @@
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
   },
-  "dependencies": {
+  "peerDependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }

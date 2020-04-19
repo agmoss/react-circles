@@ -8,9 +8,6 @@ interface IReactCirclesProps {
 /**
  * React Typescript Rotating Canvas Circles
  *
- * @param {number} numCircles - Number of circles to render
- * @param {'slow'|'fast'} speed - Speed at which the circles spin
- * @return {canvas} Styled HTML5 canvas div
  */
 const Circles: React.FC<IReactCirclesProps> = ({
   numCircles,
