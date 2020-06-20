@@ -6,11 +6,20 @@
   "module": "dist/index.es.js",
   "jsnext:main": "build/index.es.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
   "scripts": {
     "prepublish": "rm -rf ./dist && npm run build",
     "lint": "eslint --fix --ext .ts,.tsx .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "pkg-ok": "pkg-ok",
+    "prepare": "yarn run build",
+    "prepublishOnly": "npm run pkg-ok && yarn run lint",
+    "preversion": "npm run lint",
+    "version": "npm run lint && git add -A",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -51,5 +60,8 @@
   "peerDependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
+  },
+  "dependencies": {
+    "pkg-ok": "^2.3.1"
   }
 }
