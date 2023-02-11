@@ -2,10 +2,9 @@
   "name": "react-circles",
   "version": "2.0.5",
   "description": "Spinning canvas circles",
-  "main": "dist/index.js",
-  "module": "dist/index.es.js",
-  "jsnext:main": "build/index.es.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist/**/*"
   ],
